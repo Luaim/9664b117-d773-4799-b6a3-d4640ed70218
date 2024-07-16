@@ -18,7 +18,7 @@ This project implements a pet image classifier using pre-trained CNN models to c
 ## Installation
 1. Clone the repository:
 
-git clone https://github.com/your-username/pet-image-classifier.git
+git clone https://github.com/Luaim/Pet-Image-Classifier
 cd pet-image-classifier
 
 2. Install dependencies:
