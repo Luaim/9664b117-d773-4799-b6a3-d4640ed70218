@@ -60,7 +60,7 @@ python print_results.py
 - Compare accuracy and performance based on provided statistics and misclassifications.
 
 ## Contributors
-- [Luai](https://github.com/Luaim)
+- [Luai] https://github.com/Luaim
 - Udacity: Provided the course materials and guidance.
 - AWS Educate: Provided resources and support for the scholarship.
 
