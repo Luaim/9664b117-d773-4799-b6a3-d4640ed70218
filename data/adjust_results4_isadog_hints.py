@@ -2,8 +2,8 @@
 # -*- coding: utf-8 -*-
 # */AIPND-revision/intropyproject-classify-pet-images/adjust_results4_isadog_hints.py
 #                                                                             
-# PROGRAMMER: 
-# DATE CREATED:                                 
+# PROGRAMMER: Luai
+# DATE CREATED:  8 july 2024                              
 # REVISED DATE: 
 # PURPOSE: This is a *hints* file to help guide students in creating the 
 #          function adjust_results4_isadog that adjusts the results dictionary
@@ -86,7 +86,7 @@ def adjust_results4_isadog(results_dic, dogfile):
             #           from the variable line  
             #
             # Process line by striping newline from line
-            pass
+            line = line.strip()
 
             # TODO: 4b. REPLACE pass with CODE to check if the dogname(line) 
             #          exists within dognames_dic, then if the dogname(line) 
@@ -95,7 +95,8 @@ def adjust_results4_isadog(results_dic, dogfile):
             #
             # adds dogname(line) to dogsnames_dic if it doesn't already exist 
             # in the dogsnames_dic dictionary
-            pass 
+            if line not in dognames_dic:
+                dognames_dic[line] = 1 
 
             # Reads in next line in file to be processed with while loop
             # if this line isn't empty (EOF)
@@ -127,7 +128,7 @@ def adjust_results4_isadog(results_dic, dogfile):
             # Classifier Label IS NOT image of dog (e.g. NOT in dognames_dic)
             # appends (1,0) because only pet label is a dog
             else:
-                pass
+                results_dic[key].extend((1, 0))
 
         # Pet Image Label IS NOT a Dog image (e.g. NOT found in dognames_dic)
         else:
@@ -140,7 +141,7 @@ def adjust_results4_isadog(results_dic, dogfile):
             # Classifier Label IS image of Dog (e.g. found in dognames_dic)
             # appends (0, 1)because only Classifier labe is a dog
             if results_dic[key][1] in dognames_dic:
-                pass
+                results_dic[key].extend((0, 1))
 
             # TODO: 4e. REPLACE pass BELOW with CODE that adds the following to
             #           results_dic dictionary for the key indicated by the 
@@ -151,5 +152,5 @@ def adjust_results4_isadog(results_dic, dogfile):
             # Classifier Label IS NOT image of Dog (e.g. NOT in dognames_dic)
             # appends (0, 0) because both labels aren't dogs
             else:
-                pass
+                results_dic[key].extend((0, 0))
     
