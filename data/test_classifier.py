@@ -18,7 +18,7 @@
 from classifier import classifier 
 
 # Defines a dog test image from pet_images folder
-test_image="pet_images/Collie_03797.jpg"
+test_image="C:\AWS\9664b117-d773-4799-b6a3-d4640ed70218\data\pet_images\Dalmatian_04017.jpg"
 
 # Defines a model architecture to be used for classification
 # NOTE: this function only works for model architectures: 

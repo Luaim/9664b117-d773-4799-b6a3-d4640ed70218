@@ -4,7 +4,7 @@
 #                                                                             
 # PROGRAMMER: Luai
 # DATE CREATED: 11 july 2024
-# REVISED DATE: 
+# REVISED DATE: 17 july 2024
 # PURPOSE: This is a *hints* file to help guide students in creating the 
 #          function print_results that prints the results statistics from the
 #          results statistics dictionary (results_stats_dic). It should also
@@ -141,5 +141,4 @@ def print_results(results_dic, results_stats_dic, model,
             # Pet Image Label is-a-Dog, classified as-a-dog but is WRONG breed
             if ( sum(results_dic[key][3:]) == 2 and
                 results_dic[key][2] == 0 ):
-                print("Real: {:>26}   Classifier: {:>30}".format(results_dic[key][0],
-                                                          results_dic[key][1]))
+                print("Real: {:>26}   Classifier: {:>30}".format(results_dic[key][0], results_dic[key][1]))
