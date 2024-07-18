@@ -36,6 +36,11 @@ cd pet-image-classifier
 
 python check_images.py
 
+##Note
+if it does not work when you run it normally use the tremanil to run it as follow.
+1- cd data
+2-python check_images.py
+
 - Optional Arguments:
   - `--dir`: Specify the directory containing pet images (default: 'pet_images/')
   - `--arch`: Choose the CNN architecture ('vgg', 'resnet', 'alexnet') (default: 'vgg')
